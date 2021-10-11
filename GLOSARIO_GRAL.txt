@@ -1,0 +1,52 @@
+<<< NOTAS DE REACT GENERALES >>>
+
+- Crear la carpeta components dentro de src. 
+
+- Crear dentro de components la carpeta de cada componente.
+
+- Cada carpeta va a incluir lo necesario de ese componente --> .jsx + .css
+
+- Los nombres de los componentes inician con mayuscula --> MiComponente
+
+- Hay que instalar las librerias que use el proyecto:
+  npm install -----> npm install react-bootstrap boostrap
+
+- CREANDO LA CARPETA UTILS/NOMBRE QUE QUIERA: puedo poner ahi las constantes globales de la aplicación. Luego las importo en el archivo principal.
+
+- siempre tiene que existir un archivo llamado index.js dentro de src ya que es la primer web que se va a buscar por defecto. Esto es una configuración de webpack. Nota: lo que pasa en index.js es algo que solo sucede una vez en nuestra app y es al principio: NO se repite.
+
+<<< WEBPACK >>> 
+
+-Webpack un bundler o empaquetador de módulos
+
+- ¿Cómo funciona? Podemos tener, por ejemplo, un módulo JS que vaya a depender de otros módulos .js, con imágenes en diferentes formatos como JPG o PNG. O estar utilizando algún preprocesador de CSS, como puede ser SASS, Less y Stylus. 
+Webpack recoge todos estos módulos y los transforma a assets que puede entender el navegador, como por ejemplo archivos JS, CSS, imágenes, videos, etc
+
+- Internamente está incluido cuando hacemos "create-react-app"
+
+<<< JSX >>>
+
+-JSX = JS + HTML
+
+-Es una extensión de sintaxis de Javascript que se parece a html. Es una extensión que nos permite hacer llamadas a funciones y a construcción de objetos.
+
+- Es UN EXTENSIÓN DE JS, NO DE REACT --> no hay obligación de usarlo pero es recomendado por el sitio oficial de REACT
+
+- Los elementos deben ser balanceados. Por cada apertura debe haber un cierre.
+    <img src=””> Mal
+    <img src=””></img> Es mejorable
+
+- Si el elemento no tiene hijos, debe idealmente ser auto-cerrado
+    <img src=”” /> Ideal
+
+- Class es palabra reservada, en su lugar usar className. 
+    <img src=”” class=”my-class” /> Mal
+    <img src=”” className=”my-class”></img> Ok
+
+- En JSX se utilizan tanto los estilos como los eventos estándar del DOM, como onclick, onchange, onkeydown, etc. pero utilizando camelCase: onClick, onChange, onKeyDown / marginTop, paddingBottom, etc.
+
+<<< VIRTUAL DOM >>>
+
+Es la representación de una app de React en forma de objeto. Cada parte  del DOM se representa como una fibra/nodo. Los nodos más populares son Elementros de React y estos se separan en dos categorías.
+
+<<< REACT >>>

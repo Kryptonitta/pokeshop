@@ -1,0 +1,5 @@
+.NavBar__categorias {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
