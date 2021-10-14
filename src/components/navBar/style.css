@@ -1,5 +1,66 @@
+/*GENERAL NAVBAR*/
+.NavBar {
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(119, 118, 118);
+	padding: 0px 20px;
+}
+
+/*LOGO WIDGET*/
+.NavBar__logoWidget {
+	display: flex;
+	align-items: center;
+	height: inherit;
+}
+
+.NavBar__logoWidget--logo {
+	height: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.NavBar__logoWidget--nombre {
+	font-size: 15x;
+	margin-bottom: 6px;
+}
+
+/*CATEGORIAS*/
 .NavBar__categorias {
+	height: inherit;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: white;
+}
+
+.NavBar__categorias--items {
+	list-style: none;
+	margin: auto 10px;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.NavBar__categorias--items:hover {
+	color: red;
+}
+
+.NavBar__categorias--items:active {
+	color: red;
+}
+
+/*CART WIDGET*/
+.NavBar__cartWidget {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.NavBar__cartWidget--counter {
+	margin-left: 10px;
+	font-size: 25px;
+	color: white;
 }

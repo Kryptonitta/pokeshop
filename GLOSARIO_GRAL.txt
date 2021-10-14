@@ -49,4 +49,26 @@ Webpack recoge todos estos módulos y los transforma a assets que puede entender
 
 Es la representación de una app de React en forma de objeto. Cada parte  del DOM se representa como una fibra/nodo. Los nodos más populares son Elementros de React y estos se separan en dos categorías.
 
-<<< REACT >>>
+<<< DESESTRUCTURACIÓN >>>
+
+- Es una manera más sencilla de llamar elementos de un array 
+
+const array = [1,2,3]
+
+# ANTES
+
+const a = array[1]
+const b = array[2]
+const c = array[3]
+
+# AHORA
+
+const [a,b,c] = array
+
+---> En el caso que quiero llamar al elemento 1 sería:
+ -> const [a] = array[1]
+
+---> Si quiero seleccionar a y c puedo hacer:
+ -> const [a,,c] = array
+
+-En objetos se complejiza un poco más. Googlear en caso de que lo quiera utilizar
