@@ -10,8 +10,7 @@ const ItemListContainer = (props) => {
 
     return(
         <section className="ItemListContainer__greeting">
-            <p>{props.saludo},soy </p><br/>{/*sin destructuring*/}
-            <p>{nom}.</p> {/*con destructuring*/}
+            <p>{props.saludo},soy {/*sin desestructuración*/} {nom}.</p> {/*con desestructuración*/}
         </section>
     )
 
