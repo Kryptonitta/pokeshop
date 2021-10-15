@@ -13,4 +13,4 @@ const CartWidget =()=>{
     
 }
 
-export default CartWidget;
+export default CartWidget; //Lo importé en NavBar

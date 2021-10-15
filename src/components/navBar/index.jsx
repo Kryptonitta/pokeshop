@@ -12,7 +12,6 @@ const NavBar = () => {
 			<nav className="NavBar">
 				<div className='NavBar__logoWidget'>
 					<img src={logo} className='NavBar__logoWidget--logo' alt="logo"/>
-					{/* <p className='NavBar__logoWidget--nombre'>pokeshop</p> */}
 				</div>
 					
 					

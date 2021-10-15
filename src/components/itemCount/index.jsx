@@ -34,4 +34,4 @@ const ItemCount = (props) =>{
     )
 }
 
-export default ItemCount;
+export default ItemCount; //Lo importé provisoriamente en ItemListContainer

@@ -4,10 +4,16 @@
 	box-sizing: border-box;
 }
 
-nav {
-	height: 120px;
+.app__header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
+}
+
+.app__section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }

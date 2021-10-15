@@ -1,24 +1,24 @@
 import React from "react";
-// import ReactDOM from "react-dom";
-
 //Componentes
 import NavBar from "./components/navBar";
-import ItemDetailContainer from "./containers/itemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./containers/itemListContainer/ItemListContainer";
 //Css general
-import "./index.css";
+import "./App.css";
 
-// import {Test01} from "./components/utils"; //si el archivo NO se llama index, tengo que especificarlo acá
 
 
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header'>
+		<div className='app'>
+
+			<header className='app__header'>
 				<NavBar />
-				<ItemListContainer saludo="Hola" nombre="el greeting"/>
-				<ItemDetailContainer/>
 			</header>
+
+			<section className='app__section'>
+				<ItemListContainer/> {/* Acá están de manera "provisoria" el prop greetings + el itemCount */}
+			</section>
+
 		</div>
 	);
 }

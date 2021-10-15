@@ -1,18 +1,22 @@
+//React
 import React from "react";
-//Estilo
+import ItemCount from "../../components/itemCount";
+//Style
 import "./style.css";
+//Componentes
 
-const ItemListContainer = (props) => {
-
-    console.log(props.nombre)  //js vainilla
-
-    const {saludo: sal , nombre:nom} = props //aplico desestructuracióngit 
+const ItemListContainer=({propGreetings})=>{
 
     return(
-        <section className="ItemListContainer__greeting">
-            <p>{props.saludo},soy {/*sin desestructuración*/} {nom}.</p> {/*con desestructuración*/}
-        </section>
+        <div className="ItemListContainer__greeting">
+            <h1>{propGreetings}</h1>
+            <ItemCount stock="5" initial="1"/>     
+        </div>
     )
+}
+
+ItemListContainer.defaultProps = {
+    propGreetings: "Armá tu mejor equipo",
 
 }
 
