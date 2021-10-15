@@ -1,0 +1,8 @@
+.ItemListContainer__greeting {
+	color: rgb(0, 0, 0);
+	font-size: 40px;
+	background-color: rgb(187, 139, 232);
+	padding: 40px;
+	margin: auto;
+	width: 80%;
+}

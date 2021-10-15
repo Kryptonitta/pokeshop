@@ -6,7 +6,7 @@ const ItemListContainer = (props) => {
 
     console.log(props.nombre)  //js vainilla
 
-    const {saludo: sal , nombre:nom} = props //aplico desestructuración
+    const {saludo: sal , nombre:nom} = props //aplico desestructuracióngit 
 
     return(
         <section className="ItemListContainer__greeting">

@@ -3,7 +3,8 @@ import React from "react";
 
 //Componentes
 import NavBar from "./components/navBar";
-import ItemListContainer from "./components/itemListContainer/ItemListContainer";
+import ItemDetailContainer from "./containers/itemDetailContainer/ItemDetailContainer";
+import ItemListContainer from "./containers/itemListContainer/ItemListContainer";
 //Css general
 import "./index.css";
 
@@ -15,7 +16,8 @@ function App() {
 		<div className='App'>
 			<header className='App-header'>
 				<NavBar />
-				<ItemListContainer saludo="Hola" nombre="Kari"/>
+				<ItemListContainer saludo="Hola" nombre="el greeting"/>
+				<ItemDetailContainer/>
 			</header>
 		</div>
 	);
