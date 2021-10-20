@@ -9,15 +9,14 @@ const ItemListContainer=({propGreetings})=>{
 
     return(
         <div className="ItemListContainer__greeting">
-            <h1>{propGreetings}</h1>
-            <ItemCount stock="5" initial="1"/>     
+            <h1 className="ItemListContainer__greeting--h1">{propGreetings}</h1>
+            {/* OPCIÓN 01 */}
+            {/* <ItemCount stock="5" initial="1"/>      */}
+            {/* OPCIÓN 02 */}
+            <ItemCount stock={10} initial={0} onAdd={(cantidad) => {console.log(cantidad)}}/>
         </div>
     )
 }
 
-ItemListContainer.defaultProps = {
-    propGreetings: "Armá tu mejor equipo",
-
-}
-
 export default ItemListContainer;
+

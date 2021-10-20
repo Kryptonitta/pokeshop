@@ -72,3 +72,9 @@ const [a,b,c] = array
  -> const [a,,c] = array
 
 -En objetos se complejiza un poco más. Googlear en caso de que lo quiera utilizar
+
+<<< VENTAJAS DE REACT SOBRE JS VAINILLA >>>
+
+- Con solo modificar variables, react se encarga de actualizar toda la web
+- Mientras que js modifica el DOM, react modifica el virtual DOM --> esto mejora MUCHISIMO la performance de nuestra web
+

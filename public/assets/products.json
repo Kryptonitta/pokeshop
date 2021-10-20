@@ -1,0 +1,92 @@
+[
+{
+        "id":1,
+        "stock":10,
+        "title":"Pikachu",
+        "description":"Cuanto más potente es la energía eléctrica que genera este Pokémon, más suaves y elásticas se vuelven las bolsas de sus mejillas.",
+        "price":100,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+        "category":"normal"
+    },
+    {
+        "id":2,
+        "stock":10,
+        "title":"Raichu",
+        "description":"Su larga cola le sirve como toma de tierra para protegerse a sí mismo del alto voltaje que genera su cuerpo.",
+        "price":200,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png",
+        "category":"normal"
+    },
+    {
+        "id":3,
+        "stock":10,
+        "title":"Jigglypuff",
+        "description":"Su capacidad pulmonar es excepcional, incluso para un Pokémon. Es capaz de cantar nanas sin cesar hasta que su rival se duerma.",
+        "price":300,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png",
+        "category":"normal"
+    },
+    {
+        "id":4,
+        "stock":10,
+        "title":"Wigglytuff",
+        "description":"Cuanto más aire inhala, más aumenta de tamaño. Si se enfada, hincha el cuerpo con el fin de intimidar a su oponente.",
+        "price":400,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/040.png",
+        "category":"normal"
+    },
+    {
+        "id":5,
+        "stock":10,
+        "title":"Bulbasaur",
+        "description":"Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo.",
+        "price":400,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
+        "category":"normal"
+    },
+    {
+        "id":6,
+        "stock":10,
+        "title":"Ivysaur",
+        "description":"Cuando le crece bastante el bulbo del lomo, pierde la capacidad de erguirse sobre las patas traseras.",
+        "price":400,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+        "category":"normal"
+    },
+    {
+        "id":7,
+        "stock":10,
+        "title":"Squirtle",
+        "description":"Cuando retrae su largo cuello en el caparazón, dispara agua a una presión increíble.",
+        "price":400,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+        "category":"normal"
+    },
+    {
+        "id":8,
+        "stock":10,
+        "title":"Wartortle",
+        "description":"Se lo considera un símbolo de longevidad. Los ejemplares más ancianos tienen musgo sobre el caparazón.",
+        "price":400,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
+        "category":"normal"
+    },
+    {
+        "id":9,
+        "stock":10,
+        "title":"Snorlax ",
+        "description":"No se encuentra satisfecho hasta haber ingerido 400 kg de comida cada día. Cuando acaba de comer, se queda dormido.",
+        "price":400,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
+        "category":"normal"
+    },
+    {
+        "id":10, 
+        "stock":10,
+        "title":"Meowth ",
+        "description":"Le encanta reunir objetos brillantes. Cuando está de buen humor, hasta le muestra la colección a su Entrenador.",
+        "price":400,
+        "pictureURL":"https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png",
+        "category":"normal"
+    }
+]

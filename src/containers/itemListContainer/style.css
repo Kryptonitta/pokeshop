@@ -10,6 +10,8 @@
 	align-items: center;
 }
 
-.ItemListContainer__greeting h1 {
+.ItemListContainer__greeting--h1 {
 	margin-bottom: 20px;
+	color: white;
+	font-weight: 400;
 }
