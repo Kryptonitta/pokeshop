@@ -20,9 +20,9 @@ function App() {
 				<ItemListContainer propGreetings="Armá tu mejor equipo"/> {/* Acá paso el prop --> se pasan siempre desde el componente padre. Acá están de manera "provisoria" el prop greetings + el itemCount */}
 			</section>
 
-			<section>
+			{/* <section>
 				<Test/>
-			</section>
+			</section> */}
 
 		</div>
 	);
