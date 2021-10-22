@@ -19,7 +19,15 @@ img {
 	justify-content: center;
 }
 
-.Item__info p {
+.Item__info--description {
 	font-size: 13px;
-	margin: 10px 0px;
+	margin: 2px 0px;
+	padding: 10px 0px;
+}
+
+.Item__info--stock,
+.Item__info--price {
+	font-weight: 500;
+	font-size: 14px;
+	margin-bottom: 2px;
 }

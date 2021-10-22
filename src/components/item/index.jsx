@@ -13,10 +13,11 @@ const Item = ({product}) =>{
                 <img src={product.pictureURL} alt="imagen producto"/>
             </div>
             <div className="Item__info">
-                <h1>{product.title}</h1>
-                <p>{product.description}</p>
-                <p>$ {product.price}</p>
-                <ItemCount stock={10} initial={0} onAdd={(cantidad) => {console.log(cantidad)}}/>
+                <h1 className="Item__info--title">{product.title}</h1>
+                <p className="Item__info--description">{product.description}</p>
+                <p className="Item__info--stock">Stock disponible: {product.stock}</p>
+                <p className="Item__info--price">Precio unitario: ${product.price}</p>
+                <ItemCount stock={product.stock} initial={0} onAdd={(cantidad) => {console.log(cantidad)}}/>
                 {/* <button onClick={()=>buyProduct(product)}>comprame</button> */}
             </div> 
 		</div>

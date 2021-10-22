@@ -10,7 +10,7 @@
     },
     {
         "id":2,
-        "stock":10,
+        "stock":3,
         "title":"Raichu",
         "description":"Su larga cola le sirve como toma de tierra para protegerse a sí mismo del alto voltaje que genera su cuerpo.",
         "price":200,
@@ -19,7 +19,7 @@
     },
     {
         "id":3,
-        "stock":10,
+        "stock":5,
         "title":"Jigglypuff",
         "description":"Su capacidad pulmonar es excepcional, incluso para un Pokémon. Es capaz de cantar nanas sin cesar hasta que su rival se duerma.",
         "price":300,
@@ -28,7 +28,7 @@
     },
     {
         "id":4,
-        "stock":10,
+        "stock":7,
         "title":"Wigglytuff",
         "description":"Cuanto más aire inhala, más aumenta de tamaño. Si se enfada, hincha el cuerpo con el fin de intimidar a su oponente.",
         "price":400,
@@ -37,7 +37,7 @@
     },
     {
         "id":5,
-        "stock":10,
+        "stock":21,
         "title":"Bulbasaur",
         "description":"Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo.",
         "price":400,
@@ -46,7 +46,7 @@
     },
     {
         "id":6,
-        "stock":10,
+        "stock":4,
         "title":"Ivysaur",
         "description":"Cuando le crece bastante el bulbo del lomo, pierde la capacidad de erguirse sobre las patas traseras.",
         "price":400,
@@ -55,7 +55,7 @@
     },
     {
         "id":7,
-        "stock":10,
+        "stock":5,
         "title":"Squirtle",
         "description":"Cuando retrae su largo cuello en el caparazón, dispara agua a una presión increíble.",
         "price":400,
@@ -64,7 +64,7 @@
     },
     {
         "id":8,
-        "stock":10,
+        "stock":0,
         "title":"Wartortle",
         "description":"Se lo considera un símbolo de longevidad. Los ejemplares más ancianos tienen musgo sobre el caparazón.",
         "price":400,
@@ -73,7 +73,7 @@
     },
     {
         "id":9,
-        "stock":10,
+        "stock":5,
         "title":"Snorlax ",
         "description":"No se encuentra satisfecho hasta haber ingerido 400 kg de comida cada día. Cuando acaba de comer, se queda dormido.",
         "price":400,
@@ -82,7 +82,7 @@
     },
     {
         "id":10, 
-        "stock":10,
+        "stock":8,
         "title":"Meowth ",
         "description":"Le encanta reunir objetos brillantes. Cuando está de buen humor, hasta le muestra la colección a su Entrenador.",
         "price":400,
