@@ -62,11 +62,13 @@ const ItemCount = ({stock,initial,onAdd}) =>{
     }
 
     return(
-        <div>
+        <div className="container">
             <p>Seleccionaste {contador} item</p>
-            <button onClick={sumar}>+</button>
-            <button onClick={restar}>-</button>
-            <button disabled={contador>0 ? false:true} onClick={agregar}>Agregar al carrito</button>
+            <div className="contador"> 
+                <button onClick={restar}  className="contador--acumulador">-</button>
+                <button onClick={sumar} className="contador--acumulador">+</button>
+            </div>
+            <button disabled={contador>0 ? false:true} onClick={agregar} className="acumulador--btn">Agregame</button>
         </div>
     )
 }
