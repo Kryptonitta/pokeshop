@@ -78,3 +78,35 @@ const [a,b,c] = array
 - Con solo modificar variables, react se encarga de actualizar toda la web
 - Mientras que js modifica el DOM, react modifica el virtual DOM --> esto mejora MUCHISIMO la performance de nuestra web
 
+<<< SINCRONISMO VS ASINCRONISMO >>>
+
+- Sincrónico --> es un código "bloqueante" ya que hasta que no pasa eso no viene lo que sigue
+
+- Asincrónico --> es código "no bloqueante" y permite realizar varias tareas en paralelo
+
+- Estados: pending - fullfilled - rejected
+
+const promesa = new Promise((resolve, reject) => {
+  //Tarea asincrónica
+        setTimeout(() => {
+            console.log('Tarea terminada')
+            resolve()
+        }, 1500)
+
+// Esto te avisa cuando temrinó bien la promesa
+
+        promesa.then(function(resultado){
+            console.log(resultado)
+        })
+
+// Esto te avisa cuando falla la promesa
+
+        promesa.catch(function(error){
+            console.log(error)
+        })
+
+// Esto pasa siempre
+
+        promesa.finally(function(){
+            console.log('Finalizado')
+        })

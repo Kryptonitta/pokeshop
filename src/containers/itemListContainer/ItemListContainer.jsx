@@ -1,22 +1,40 @@
 //React
 import {useState,useEffect} from "react";
-import ItemCount from "../../components/itemCount";
 import ItemList from "../../components/itemList";
 //Style
 import "./style.css";
-//Componentes
+//JSON
+import productos from "../../products.json";
 
 const ItemListContainer=({propGreetings})=>{
 
     const [products,setProducts] = useState([])
 
+    // //Async al JSON --> ESTÁ BIEN ESTE PERO ES CON ASYNC Y NO TIENE EL SET TIME OUT
+    // useEffect(async()=>{
+    //     const response = await fetch ("./assets/products.json")
+    //     const json = await response.json()
+    //     console.log(json) //esto está bien. NO tocar
+    //     setProducts(json)
+    // },[])
+
     //Async al JSON
-    useEffect(async()=>{
-        const response = await fetch ("./assets/products.json")
-        const json = await response.json()
-        console.log(json) //esto está bien. NO tocar
-        setProducts(json)
-    },[])
+    const getData = (data) =>
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (data) {
+                    resolve(data);
+                } else {
+                    reject("No se encontro nada");
+                }
+            }, 2000);
+        });
+
+    useEffect(() => {
+        getData(productos)
+            .then((res) => setProducts(res))
+            .catch((err) => console.log(err));
+    }, []); //Los corchetes son para que no se produzca un loop infinito
 
     return(
         <>

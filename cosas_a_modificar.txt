@@ -1,0 +1,4 @@
+- Que el stock cambie cuando uso las funciones de sumar y restar
+
+- Que el botón cambie el texto si no hay stock o si se alcanzó el sotck máximo
+
