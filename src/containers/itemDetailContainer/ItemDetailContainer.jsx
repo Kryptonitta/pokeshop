@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
 import productos from "../../products.json";
 import ItemDetail from "../../components/itemDetail";
 
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({});
-    // const { itemId } = useParams();
 
     const itemId = 2;
 
