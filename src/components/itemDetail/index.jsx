@@ -1,3 +1,5 @@
+//ITEM DETAIL e ITEM son COMPONENTES PRESENTACIONALES. Solo reciben info y la muestran
+
 import './style.css';
 // import ItemCount from '../ItemCount/ItemCount'; //RUTEAR BIEN
 

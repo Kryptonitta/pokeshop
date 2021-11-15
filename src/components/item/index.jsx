@@ -1,3 +1,5 @@
+//ITEM DETAIL e ITEM son COMPONENTES PRESENTACIONALES. Solo reciben info y la muestran
+
 import React from "react";
 //Estilo
 import "./style.css"; 

@@ -5,8 +5,10 @@ import ItemDetail from "../../components/itemDetail";
 
 const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState(null);
-    const { itemId } = useParams();
+    const [item, setItem] = useState({});
+    // const { itemId } = useParams();
+
+    const itemId = 2;
 
     const getItem = (data) =>
         new Promise((resolve, reject) => {
@@ -32,13 +34,13 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <h2>Product Detail Example</h2>
+            <h2>Item detail Container</h2>
             <div className="itemDetailContainer">
                 {item ? (
                     <ItemDetail
                         id={item.id}
-                        photo={item.photo}
-                        name={item.name}
+                        name={item.title}
+                        photo={item.pictureURL}
                         description={item.description}
                         price={item.price}
                         stock={item.stock}
