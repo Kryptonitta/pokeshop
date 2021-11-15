@@ -110,3 +110,4 @@ const promesa = new Promise((resolve, reject) => {
         promesa.finally(function(){
             console.log('Finalizado')
         })
+

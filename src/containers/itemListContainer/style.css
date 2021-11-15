@@ -1,8 +1,7 @@
 .ItemListContainer__greeting {
 	color: rgb(0, 0, 0);
-	font-size: 15px;
 	background-color: rgb(255, 36, 36);
-	padding: 10px;
+	padding: 0px;
 	width: 100%;
 	text-align: center;
 	display: flex;
@@ -11,8 +10,23 @@
 }
 
 .ItemListContainer__greeting--h1 {
-	color: white;
+	color: rgb(255, 255, 255);
 	font-weight: 400;
+	padding: 8px;
+}
+
+.ItemListContainer__loading {
+	background-color: black;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
 	display: flex;
-	margin: auto;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ItemListContainer__loading--h2 {
+	color: rgb(255, 255, 255);
+	font-weight: 400;
+	padding: 8px;
 }

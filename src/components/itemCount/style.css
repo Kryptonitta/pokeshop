@@ -22,6 +22,10 @@
 	margin: 5px;
 }
 
+.container {
+	background-color: black;
+}
+
 .acumulador--btn:enabled {
 	border: none;
 	width: auto;

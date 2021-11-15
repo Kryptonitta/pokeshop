@@ -4,14 +4,12 @@ import "./style.css";
 //Component
 import Item from "../../components/item";
 
-
-
-
 const ItemList=({products})=>{
     
     //MAP
     return(
         <div className="ItemList">
+            {/*Acá lo que hago es mapear los productos para que por cada uno me genere una card*/}
             {products.map(product =>{
                 return <Item product={product}/>
             }) 
