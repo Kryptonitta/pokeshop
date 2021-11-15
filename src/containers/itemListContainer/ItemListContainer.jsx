@@ -1,3 +1,5 @@
+//Este container me va a servir para mostrar los productos en el index y mostrar por categoría
+
 //React
 import {useState,useEffect} from "react";
 import ItemList from "../../components/itemList";
@@ -31,18 +33,26 @@ const ItemListContainer=({propGreetings})=>{
 
     //MOSTRANDO TODOS LOS PRODUCTOS
     useEffect(() => {
-        getData(productos)
-        .then((res) => setProducts(res))
+        try{
+            getData(productos)
+            .then((res) => setProducts(res))
+        }catch{
+            console.log("Ocurrió algo y no se pudieron traer los productos")
+        }
     }, []); 
     
     //FILTRANDO POR PRECIO
         // useEffect(() =>{
-        //     getData(productos)
-        //     .then((data)=>{
-        //         let filterPrecio = data.filter((productos) =>productos.price===400);
-        //         setProducts(filterPrecio)
-        //         console.log(filterPrecio)
-        //     })
+        //     try{
+        //         getData(productos)
+        //         .then((data)=>{
+        //             let filterPrecio = data.filter((productos) =>productos.price===400);
+        //             setProducts(filterPrecio)
+        //             console.log(filterPrecio)
+        //         })
+        //     }catch{
+        //         console.log("No hay productos")
+        //     }
         // },[]) 
 
     //FILTRANDO POR category

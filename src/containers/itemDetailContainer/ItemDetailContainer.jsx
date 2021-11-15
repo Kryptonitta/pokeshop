@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useParams } from 'react-router';
-import ProductsCatalogue from "../../ProductsCatalogue.json";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router";
+import productos from "../../products.json";
+import ItemDetail from "../../components/itemDetail";
 
 const ItemDetailContainer = () => {
 
@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
         });
 
     useEffect(() => {
-        getItem(ProductsCatalogue)
+        getItem(productos)
             .then((res) => {
                 setItem(res.find((details) => details.id === itemId));
             })
