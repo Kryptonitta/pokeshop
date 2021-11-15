@@ -11,6 +11,8 @@ const ItemListContainer=({propGreetings})=>{
     //OPCIÓN TRAER TODOS LOS PRODUCTOS
     const [products,setProducts] = useState([])
  
+    //ACÁ VOY A PONER TRES MANERAS DE LOGRAR LO MISMO A MODO PRÁCTICA DE ASINCRONISMO
+
     const getData = (data) =>
     //Creo la promesa que me trae los datos. SOLO los trae, pero no se muestran. Esto lo vamos a hacer con el useEffect.
         new Promise((resolve, reject) => {
@@ -30,8 +32,7 @@ const ItemListContainer=({propGreetings})=>{
     //MOSTRANDO TODOS LOS PRODUCTOS
     useEffect(() => {
         getData(productos)
-            .then((res) => setProducts(res))
-            .catch((err) => console.log(err));
+        .then((res) => setProducts(res))
     }, []); 
     
     //FILTRANDO POR PRECIO

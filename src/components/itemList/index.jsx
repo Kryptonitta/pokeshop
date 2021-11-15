@@ -5,13 +5,13 @@ import "./style.css";
 import Item from "../../components/item";
 
 const ItemList=({products})=>{
-    
-    //MAP
+
+    //El map va por dentro del return? No debería ir por fuera? 
     return(
         <div className="ItemList">
             {/*Acá lo que hago es mapear los productos para que por cada uno me genere una card*/}
             {products.map(product =>{
-                return <Item product={product}/>
+                return <Item key={product.id} product={product}/>
             }) 
             
         }
