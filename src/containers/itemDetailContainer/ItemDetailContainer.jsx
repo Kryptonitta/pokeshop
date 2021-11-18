@@ -1,54 +1,56 @@
 import { useEffect, useState } from "react";
-import productos from "../../products.json";
+import jsonDeProductos from "../../products.json";
 import ItemDetail from "../../components/itemDetail";
+import { useParams } from "react-router";
 
 const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState({});
+    //OPCIÓN TRAER EL PRODUCTO POR ID
+    const [itemDetail, setItemDetail] = useState([]);
+    //Para filtrar por categoría
+    const {itemId} = useParams();
 
-    const itemId = 2;
+    //Acá me traigo el producto segun id mediante una promesa
 
-    const getItem = (data) =>
+    const getItemDetailById = (id) => 
         new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (data) {
-                    resolve(data);
+            setTimeout(
+                () => {
+                if (id) {
+                    resolve(jsonDeProductos.filter((item) => item.id === id));
                 } else {
-                    reject('No se encontró nada');
+                    reject("No se encontro nada");
                 }
-            }, 1500);
+            }, 1000);
+            console.log(id) //Para ver que productos me trae
         });
 
-    useEffect(() => {
-        getItem(productos)
-            .then((res) => {
-                setItem(res.find((details) => details.id === itemId));
-            })
 
-            .catch((err) => console.log(err));
-    }, [itemId]);
+        //Luego hago un useEffect para que se ejecute una vez cargado el componente
+    useEffect(
+        () => {
+        getItemDetailById(itemId)
+        .then((result) => {
+            itemId
+            ?  setItemDetail(
+                result.find((item) => item.id === itemId)
+            )
+            : setItemDetail(jsonDeProductos)
+        })
+            .catch((err) => {
+                console.log(err)
+            });
+    },[itemId]);
+    
 
-
-
+    //Armo el return con el condicional ternario
     return (
-        <>
-            <h2>Item detail Container</h2>
-            <div className="itemDetailContainer">
-                {item ? (
-                    <ItemDetail
-                        id={item.id}
-                        name={item.title}
-                        photo={item.pictureURL}
-                        description={item.description}
-                        price={item.price}
-                        stock={item.stock}
-                    />
-                ) : (
-                    "Cargando ficha de productos..."
-                )}
-            </div>
-        </>
-    );
-}
+        itemDetail.length > 0
+                ? <ItemDetail itemDetail={itemDetail} />
+                : <div>Cargando...</div>
+    )
 
-export default ItemDetailContainer;
+}   
+
+
+export default ItemDetailContainer

@@ -17,6 +17,7 @@ const ItemListContainer=({propGreetings})=>{
     //Para filtrar por categoría
     const {categoriaId} = useParams();
 
+    //Acá me traigo los productos
     const getData = (data) =>
     //Creo la promesa que me trae los datos. SOLO los trae, pero no se muestran. Esto lo vamos a hacer con el useEffect.
         new Promise((resolve, reject) => {
@@ -43,7 +44,7 @@ const ItemListContainer=({propGreetings})=>{
         .then((result) => {
             categoriaId    
             ?  setProducts(
-                result.filter((product) => product.category === categoriaId) 
+                result.filter((item) => item.category === categoriaId) 
             )
             : setProducts(jsonDeProductos)
         })
@@ -54,7 +55,7 @@ const ItemListContainer=({propGreetings})=>{
 
     console.log(jsonDeProductos)
     
-    //Los corchetes son para que se ejecute SOLO una vez cuando el componente se monte. Si quiero que se ejecute cada vez que se monte, pongo dentro de los corchetes el parametro.
+    //Los corchetes son para que se ejecute SOLO una vez cuando el componente se monte. Si quiero que se ejecute cada vez que se monte, pongo dentro de los corchetes el parametro. En este caso, el parametro es categoriaId.
 
     //El return no me admite condicionales. Es por eso que la condición de que mostrar debe realizarse con un operador ternario.
     return( 
