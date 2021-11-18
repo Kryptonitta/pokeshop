@@ -27,7 +27,7 @@ const ItemListContainer=({propGreetings})=>{
                 if (data) {
                     resolve(data);
                 } else {
-                    reject("No se encontro nada");
+                    reject("No se encontro nada. Soy el item list container");
                 }
             }, 1000);
             console.log(data) //Para ver que productos me trae

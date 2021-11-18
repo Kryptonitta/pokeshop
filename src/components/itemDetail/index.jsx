@@ -2,13 +2,13 @@
 
 import './style.css';
 import ItemCount from '../itemCount';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const ItemDetail = ({details,onAdd}) => {
     // const [cartButton, setCartButton] = useState(true);
 
     // const [quantityToAdd, setQuantityToAdd] = useState(null);
-  
+
     // const onAdd = (quantityToAdd) => {
     //   if (quantityToAdd >= 1) {
     //     setQuantityToAdd(quantityToAdd);
