@@ -3,6 +3,8 @@ import React from "react";
 import NavBar from "./components/navBar";
 import ItemListContainer from "./containers/itemListContainer/ItemListContainer";
 import ItemDetailContainer from "./containers/itemDetailContainer/ItemDetailContainer";
+//Rutas
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 //Css general
 import "./App.css";
 // import Test from "./TEST/test";
@@ -11,26 +13,22 @@ import "./App.css";
 
 function App() {
 	return (
-		<div className='app'>
+		<BrowserRouter className='app'>
+			
+			<NavBar />
+			<Routes>
+				<Route path="/" element={<ItemListContainer propGreetings="Armá tu mejor equipo"/>} exact/>
 
-			<header className='app__header'>
-				<NavBar />
-			</header>
+				<Route path="/categoria/:categoriaId" element={<ItemListContainer propGreetings="Armá tu mejor equipo"/>} exact/>
 
-			<section className='app__section'>
-				<ItemListContainer propGreetings="Armá tu mejor equipo"/> {/* Acá paso el prop --> se pasan siempre desde el componente padre. Acá están de manera "provisoria" el prop greetings + el itemCount */}
-			</section>
+				<Route path="/item/:itemid" element={<ItemDetailContainer/>} exact/>
 
-			<section className='app__section'>
-				<ItemDetailContainer/>
-			</section>
+			</Routes>
 
-			{/* <section>
-				<Test/>
-			</section> */}
-
-		</div>
+		</BrowserRouter>
 	);
 }
+
+// Acá paso el prop --> se pasan siempre desde el componente padre. Acá están de manera "provisoria" el prop greetings + el itemCount 
 
 export default App;

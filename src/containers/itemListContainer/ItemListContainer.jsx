@@ -3,17 +3,19 @@
 //React
 import {useState,useEffect} from "react";
 import ItemList from "../../components/itemList";
+//Para filtrar
+import { useParams } from "react-router";
 //Style
 import "./style.css";
 //JSON
-import productos from "../../products.json";
+import jsonDeProductos from "../../products.json";
 
 const ItemListContainer=({propGreetings})=>{
 
     //OPCIÓN TRAER TODOS LOS PRODUCTOS
     const [products,setProducts] = useState([])
- 
-    //ACÁ VOY A PONER TRES MANERAS DE LOGRAR LO MISMO A MODO PRÁCTICA DE ASINCRONISMO
+    //Para filtrar por categoría
+    const {categoriaId} = useParams();
 
     const getData = (data) =>
     //Creo la promesa que me trae los datos. SOLO los trae, pero no se muestran. Esto lo vamos a hacer con el useEffect.
@@ -27,59 +29,39 @@ const ItemListContainer=({propGreetings})=>{
                     reject("No se encontro nada");
                 }
             }, 1000);
+            console.log(data) //Para ver que productos me trae
         });
+
+        
 
     //Vamos a usar un useEffect porque queremos que se ejecute una vez cargado el componente
 
     //MOSTRANDO TODOS LOS PRODUCTOS
-    useEffect(() => {
-        try{
-            getData(productos)
-            .then((res) => setProducts(res))
-        }catch{
-            console.log("Ocurrió algo y no se pudieron traer los productos")
-        }
-    }, []); 
+    useEffect(
+        () => {
+        getData(jsonDeProductos) //es para traer el json
+        .then((result) => {
+            categoriaId    
+            ?  setProducts(
+                result.filter((product) => product.category === categoriaId) 
+            )
+            : setProducts(jsonDeProductos)
+        })
+            .catch((err) => {
+                console.log(err)
+            });
+    },[categoriaId]);
+
+    console.log(jsonDeProductos)
     
-    //FILTRANDO POR PRECIO
-        // useEffect(() =>{
-        //     try{
-        //         getData(productos)
-        //         .then((data)=>{
-        //             let filterPrecio = data.filter((productos) =>productos.price===400);
-        //             setProducts(filterPrecio)
-        //             console.log(filterPrecio)
-        //         })
-        //     }catch{
-        //         console.log("No hay productos")
-        //     }
-        // },[]) 
-
-    //FILTRANDO POR category
-    // useEffect(() =>{
-    //     getData(productos)
-    //     .then((data)=>{
-    //         let filterCategory = data.filter((productos) =>productos.category==="normal");
-    //         if (filterCategory>0){
-    //             setProducts(filterCategory)
-    //             console.log(filterCategory)
-    //         }else{
-    //             console.log("no hay productos")
-    //         }
-    //     })
-    //     .catch(()=>{
-    //         console.log("no hay data")
-    //     })
-    // },[]) 
-
-        //Los corchetes son para que se ejecute SOLO una vez cuando el componente se monte. Si quiero que se ejecute cada vez que se monte, pongo dentro de los corchetes el parametro.
+    //Los corchetes son para que se ejecute SOLO una vez cuando el componente se monte. Si quiero que se ejecute cada vez que se monte, pongo dentro de los corchetes el parametro.
 
     //El return no me admite condicionales. Es por eso que la condición de que mostrar debe realizarse con un operador ternario.
     return( 
         products.length > 0 
         ? <div className="ItemListContainer__greeting">
             <h1 className="ItemListContainer__greeting--h1">{propGreetings}</h1>
-            <ItemList products={products} propGreetings={propGreetings}/>
+            <ItemList products={products}/>
             </div> 
         : <>
             <div className="ItemListContainer__greeting">
@@ -92,5 +74,5 @@ const ItemListContainer=({propGreetings})=>{
     )
 }
 
-export default ItemListContainer;
 
+export default ItemListContainer

@@ -6,19 +6,8 @@
 
 .contador {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	padding: 3px;
-}
-
-.contador--acumulador {
-	border: 2px solid red;
-	background-color: red;
-	color: rgb(255, 255, 255);
-	display: flex;
-	font-size: 20px;
-	width: 25px;
-	height: 25px;
-	justify-content: center;
 	margin: 5px;
 }
 
@@ -26,7 +15,8 @@
 	background-color: black;
 }
 
-.acumulador--btn:enabled {
+.acumulador--btn:enabled,
+.contador--acumulador:enabled {
 	border: none;
 	width: auto;
 	text-align: center;
@@ -37,7 +27,8 @@
 	background-color: red;
 }
 
-.acumulador--btn:disabled {
+.acumulador--btn:disabled,
+.contador--acumulador:disabled {
 	border: none;
 	padding: 5px;
 	font-size: 15px;

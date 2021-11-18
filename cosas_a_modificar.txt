@@ -1,8 +1,12 @@
 - Que el stock cambie cuando uso las funciones de sumar y restar
 
-- Que el botón cambie el texto si no hay stock o si se alcanzó el sotck máximo
+- Que el botón cambie su texto si no hay stock y deshabilite el productos
 
--Que el "onda add" se deshabilite si ya agregué los productos al carrito
+- Que el boton on add se desabilite cuando se llegó al stock máximo
+
+- Ver que si se agregó el producto al carrito, baje el stock en el producto.
+
+
 
 NOTA: 
 Los containers se encargan de conseguir la información, no tanto de renderizar la info

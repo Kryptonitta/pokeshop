@@ -319,3 +319,28 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
 - API: es un "traductor" que me permite usar un lenguaje diferente
 - API REST:
 - REST: es una estructura de datos que permite crear una API
+
+**----- RUTAS Y NAVEGACIÓN -----**
+SPA: single page aplication
+un spa es una aplicación que se carga en una sola página. Esto reduce el tiempo de carga y optimiza el uso de memoria.
+
+En React esto se logra con el Router. El Router es un componente que se encarga de manejar las rutas. Se instala con--> npm i react-router-dom
+
+Route es el más usado. También tenemos link y navLink. La diferencia entre link y navLinks es que el primero es un enlace normal, mientras que el segundo es un enlace que se puede usar en un menú: nos genera un estado active segun donde estemos. Esto luego lo podemos usar en css para darle un estilo diferente.
+
+Para poder usar rutas, tenemos que colocar BrowserRouter en el componente principal o en el padre de todos los componentes que queramos que sean rutas.
+En este caso, lo vamos a poner en app.js que es el componente padre.
+
+También tenemos que utilizar el componente Router para poder usar las rutas. Quedaría así:
+
+<BrowserRouter>		
+  <NavBar /> //Acá pasamos un componente sin link 
+	<Routes>
+		<Route path="/" element={<ItemListContainer propGreetings="Armá tu mejor equipo"/>} exact/> //Acá le ponemos el exact para que solo se muestre cuando la ruta es estrictamente igual a /
+    <Route path="/item/:id" element={<ItemDetailContainer/>} /> //Los componentes van con las </> dentro de llaves.
+	</Routes>
+</BrowserRouter>
+
+#### UseParams
+
+UseParams es una función que nos permite obtener los parámetros de la ruta. Para ello, tenemos que pasarle una función que nos devuelva un objeto con los parámetros. Esto lo podemos hacer con una arrow function:

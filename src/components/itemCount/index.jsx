@@ -43,6 +43,7 @@ const ItemCount = ({stock,initial,onAdd}) =>{
 
     //función sumar
     const sumar = () =>{
+        
         if(contador<stock){
             setContador(contador +1 )
             //En este caso, no es lo mismo contador++. Esto se debe a que originalmente contador++ no solo es incremento sino que también es asignación. En este caso, se debe asignar un nuevo valor a contador ya que sino estaria modificando el valor original.
@@ -59,7 +60,7 @@ const ItemCount = ({stock,initial,onAdd}) =>{
 
     console.log("Estoy por fuera"+contador) //Esto es para ver que se está modificando el valor de contador. Tener en cuenta que las funciones de estado son asincronicas. Si pusiera el console.log luego del set contador, me daría un valor anterior, porque primero me va a resolver el concole.log y luego el setContador. Por eso el mismo debe estar por fuera del mismo.
 
-    //función agregar 
+    //función agregar al carrito. 
     const agregar = () =>{
         if(stock > 0) {
             onAdd(contador)
@@ -70,11 +71,11 @@ const ItemCount = ({stock,initial,onAdd}) =>{
         <div className="container">
             {/* <p>Vas a agregar {contador} pokemones al carrito</p> */}
             <div className="contador"> 
-                <button onClick={restar}  className="contador--acumulador">-</button>
-                <button onClick={sumar} className="contador--acumulador">+</button>
+                <button disabled={contador!==0 ? false:true} onClick={restar}  className="contador--acumulador">-</button>
+                <button disabled={contador!==stock ? false:true} onClick={sumar} className="contador--acumulador">+</button>
             </div>
-            {/*significado de la condición: si contador es mayor a 0 entonces retorna false, si no es mayor a 0 entonces retorna true. Por defecto el disabled es true. Cuando agregamos algun item se vuelve false y se "activa".*/}
-            <button disabled={contador>0 ? false:true} onClick={agregar} className="acumulador--btn">Agregar {contador} productos</button>
+            {/*contador>0 ? false:true --> significado de la condición: si contador es mayor a 0 entonces retorna false, si no es mayor a 0 entonces retorna true .*/}
+            <button disabled={contador>0 ? false:true} onClick={agregar} className="acumulador--btn">Agregar {contador} productos al carrito</button>
         </div>
     )
 }

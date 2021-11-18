@@ -1,4 +1,6 @@
 import React from "react";
+//Rutas
+import { Link } from "react-router-dom";
 //Estilo
 import "./style.css";
 //Logo
@@ -10,27 +12,19 @@ const NavBar = () => {
 	return (
 		<>
 			<nav className="NavBar">
-				<div className='NavBar__logoWidget'>
+				<Link to="/" className='NavBar__logoWidget'>
 					<img src={logo} className='NavBar__logoWidget--logo' alt="logo"/>
-				</div>
+				</Link>
 					
 					
 				<ul className='NavBar__categorias'>
-					<li className='NavBar__categorias--items'>
-						TIERRA
-					</li>
+					<Link to="/categoria/normal" className='NavBar__categorias--items'>
+						NORMAL
+					</Link>
 
-					<li className='NavBar__categorias--items'>
-						AGUA
-					</li>
-
-					<li className='NavBar__categorias--items'>
-						FUEGO
-					</li>
-
-					<li className='NavBar__categorias--items'>
-						AIRE
-					</li>
+					<Link to="/categoria/evolucion" className='NavBar__categorias--items'>
+						EVOLUCION
+					</Link>
 				</ul>
 				
 
