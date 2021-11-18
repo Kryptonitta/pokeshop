@@ -1,8 +1,10 @@
-
+//React
 import { useEffect, useState } from "react";
-import jsonDeProductos from "../../products.json";
 import ItemDetail from "../../components/itemDetail";
+//Para filtrar
 import { useParams } from "react-router";
+//JSON
+import jsonDeProductos from "../../products.json";
 
 
 const ItemDetailContainer = () => {
@@ -19,6 +21,7 @@ const ItemDetailContainer = () => {
             setTimeout(
                 () => {
                 if (data) {
+                    console.log("Data desde IDC :"+data);
                     resolve(data);
                 } else {
                     reject("No se encontro nada. Soy el IDC");
@@ -45,10 +48,9 @@ const ItemDetailContainer = () => {
     //Armo el return con el condicional ternario
     return (
         <div className="itemDetailContainer">
-        {itemDetail ? <ItemDetail details={itemDetail} /> : "cargando..."}
+        {itemDetail ? <ItemDetail details={itemDetail} /> : "El producto se está cargando..."}
         </div>
     )
 }   
-
 
 export default ItemDetailContainer

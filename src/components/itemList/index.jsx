@@ -4,16 +4,14 @@ import "./style.css";
 //Component
 import Item from "../../components/item";
 
-const ItemList=({products})=>{
+const ItemList=({items})=>{
 
+// Acá lo que hago es mapear los productos para que por cada uno me genere una card
     return(
         <div className="ItemList">
-            {/*Acá lo que hago es mapear los productos para que por cada uno me genere una card*/}
-            {products.map(product =>{
-                return <Item key={product.id} product={product}/>
-            }) 
-            
-        }
+            {items.length 
+            ? items.map((items) => <Item key={items.id} item={items}/>)
+            : "Cargando productos..."} 
         </div>
     )
 }

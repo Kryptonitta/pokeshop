@@ -30,7 +30,7 @@ const ItemListContainer=({propGreetings})=>{
                     reject("No se encontro nada. Soy el item list container");
                 }
             }, 1000);
-            console.log(data) //Para ver que productos me trae
+            console.log("productos que llegan desde ILC "+data) //Para ver que productos me trae
         });
 
         
@@ -44,7 +44,7 @@ const ItemListContainer=({propGreetings})=>{
         .then((result) => {
             categoriaId    
             ?  setProducts(
-                result.filter((item) => item.category === categoriaId) 
+                result.filter((producto) => producto.category === categoriaId) 
             )
             : setProducts(jsonDeProductos)
         })
@@ -62,7 +62,7 @@ const ItemListContainer=({propGreetings})=>{
         products.length > 0 
         ? <div className="ItemListContainer__greeting">
             <h1 className="ItemListContainer__greeting--h1">{propGreetings}</h1>
-            <ItemList products={products}/>
+            <ItemList items={products}/>
             </div> 
         : <>
             <div className="ItemListContainer__greeting">

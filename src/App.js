@@ -21,7 +21,7 @@ function App() {
 
 				<Route path="/categoria/:categoriaId" element={<ItemListContainer propGreetings="Armá tu mejor equipo"/>} exact/>
 
-				<Route path="/item/:itemid" element={<ItemDetailContainer/>} exact/>
+				<Route path="/item/:itemId" element={<ItemDetailContainer/>} exact/>
 
 			</Routes>
 

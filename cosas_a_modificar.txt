@@ -1,5 +1,7 @@
 - Que el stock cambie cuando uso las funciones de sumar y restar
 
+- No funciona el boton agregar desde ItemDetail (si desde item list)
+
 - Que el botón cambie su texto si no hay stock y deshabilite el productos
 
 - Que el boton on add se desabilite cuando se llegó al stock máximo

@@ -8,19 +8,19 @@ import "./style.css";
 //Componentes
 import ItemCount from "../itemCount";
 
-const Item = ({product}) =>{
-    console.log (product.id)
+const Item = ({item}) =>{
+    console.log ("Vengo desde *item*: "+item.id)
 	return (
 		<div className="Item">
             <div>
-                <img src={product.pictureURL} alt="imagen producto"/>
+                <img src={item.pictureURL} alt="imagen producto"/>
             </div>
             <div className="Item__info">
-                <h1 className="Item__info--title">{product.title}</h1>
-                <p className="Item__info--stock">Stock disponible: {product.stock}</p>
-                <p className="Item__info--price">Precio unitario: ${product.price}</p>
-                <Link to={`/item/${product.id}`} className="Item__info--link">Ver más</Link>
-                <ItemCount stock={product.stock} initial={0} onAdd={(cantidad) => {console.log(cantidad)}}/>
+                <h1 className="Item__info--title">{item.title}</h1>
+                <p className="Item__info--stock">Stock disponible: {item.stock}</p>
+                <p className="Item__info--price">Precio unitario: ${item.price}</p>
+                <Link to={`/item/${item.id}`} className="Item__info--link">Ver más</Link>
+                <ItemCount stock={item.stock} initial={0} onAdd={(cantidad) => {console.log(cantidad)}}/>
             </div> 
 		</div>
 	);
