@@ -20,7 +20,8 @@ const ItemDetail = ({productos, onAdd}) => {
                     <p className="Item__info--description">{productos.description}</p>
                     <p className="Item__info--price"> {Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(productos.price)}</p>
                     <p className="Item__info--stock">Stock: {productos.stock}</p>
-                    <ItemCount stock={productos.stock} initial={0} agregar={onAdd} name={productos.name} />
+                    {/* <ItemCount stock={productos.stock} initial={0} agregar={onAdd} name={productos.name} /> */}
+                    <ItemCount stock={productos.stock} initial={0} onAdd={onAdd} name={productos.name} />
                 </div>
             </div>
         </div>
