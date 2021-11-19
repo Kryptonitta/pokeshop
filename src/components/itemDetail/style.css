@@ -1,3 +1,10 @@
+.Item_Container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .Item_detail {
 	width: 500px;
 	height: 300px;

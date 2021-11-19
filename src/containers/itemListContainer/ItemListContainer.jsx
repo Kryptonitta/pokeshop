@@ -30,7 +30,7 @@ const ItemListContainer=({propGreetings})=>{
                     reject("No se encontro nada. Soy el item list container");
                 }
             }, 1000);
-            console.log("productos que llegan desde ILC "+data) //Para ver que productos me trae
+            console.warn("Se encontraron "+data.length+" items desde ItemListContainer.") //Para ver cuantos productos me trae
         });
 
         
@@ -52,8 +52,6 @@ const ItemListContainer=({propGreetings})=>{
                 console.log(err)
             });
     },[categoriaId]);
-
-    console.log(jsonDeProductos)
     
     //Los corchetes son para que se ejecute SOLO una vez cuando el componente se monte. Si quiero que se ejecute cada vez que se monte, pongo dentro de los corchetes el parametro. En este caso, el parametro es categoriaId.
 

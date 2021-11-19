@@ -13,6 +13,7 @@ import "./App.css";
 
 function App() {
 	return (
+		<div className="App">
 		<BrowserRouter className='app'>
 			
 			<NavBar />
@@ -26,6 +27,7 @@ function App() {
 			</Routes>
 
 		</BrowserRouter>
+		</div>
 	);
 }
 

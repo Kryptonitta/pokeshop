@@ -54,11 +54,11 @@ const ItemCount = ({stock,initial,onAdd}) =>{
     const restar = () =>{
         if (contador>=1){
             setContador(contador -1)
-            console.log("estoy por dentro"+contador) //Esto va a pasar ANTES que setContador, porque es una función asincrona.
+            // console.log("estoy por dentro"+contador) //Esto va a pasar ANTES que setContador, porque es una función asincrona.
         }
     }
 
-    console.log("Estoy por fuera"+contador) //Esto es para ver que se está modificando el valor de contador. Tener en cuenta que las funciones de estado son asincronicas. Si pusiera el console.log luego del set contador, me daría un valor anterior, porque primero me va a resolver el concole.log y luego el setContador. Por eso el mismo debe estar por fuera del mismo.
+    // console.log("Estoy por fuera"+contador) //Esto es para ver que se está modificando el valor de contador. Tener en cuenta que las funciones de estado son asincronicas. Si pusiera el console.log luego del set contador, me daría un valor anterior, porque primero me va a resolver el concole.log y luego el setContador. Por eso el mismo debe estar por fuera del mismo.
 
     //función agregar al carrito. 
     const agregar = () =>{
